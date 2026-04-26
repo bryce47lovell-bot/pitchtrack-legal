@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – PitchTrack</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161e;
+      --border: #1e2330;
+      --accent: #e8553e;
+      --accent-dim: rgba(232, 85, 62, 0.12);
+      --text: #e8eaf0;
+      --muted: #7a8099;
+      --heading-font: 'DM Serif Display', Georgia, serif;
+      --body-font: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Subtle grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    header {
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    .logo-text {
+      font-family: var(--heading-font);
+      font-size: 22px;
+      letter-spacing: 0.01em;
+      color: var(--text);
+    }
+
+    h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    p {
+      color: #b0b4c8;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    ul li {
+      color: #b0b4c8;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .callout {
+      background: var(--accent-dim);
+      border: 1px solid rgba(232, 85, 62, 0.25);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .callout p {
+      color: #d9bdb8;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(232, 85, 62, 0.4);
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-color: var(--accent);
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .wrapper { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-row">
+        <div class="logo-icon">
+          <!-- Baseball/pitch icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 4.07c-.34.04-.67.1-1 .18V4.26c.33-.1.66-.18 1-.23v2.04zm2 0V4.03c.34.05.67.13 1 .23v1.99c-.33-.08-.66-.14-1-.18zM4.26 13H2.05c.05-.34.13-.67.23-1h1.99c-.08.33-.14.66-.18 1zm.18-3H2.28c.1-.34.18-.67.23-1h2.04c-.04.34-.1.67-.18 1zm.82 6l-1.41 1.41C3.32 16.6 2.9 15.83 2.56 15h1.93c.2.35.42.69.67 1h.1zm-.1-8h-.1c-.25.31-.47.65-.67 1H2.56c.34-.83.76-1.6 1.19-2.41L5.16 8zm13.68 8h.1c.25-.31.47-.65.67-1h1.93c-.34.83-.76 1.6-1.19 2.41L18.84 16zm.1-8l1.41-1.41c.43.81.85 1.58 1.19 2.41h-1.93c-.2-.35-.42-.69-.67-1zm.74 5c-.04-.34-.1-.67-.18-1h2.04c.1.33.18.66.23 1h-2.09zM19 11c-.08-.34-.14-.67-.18-1h2.04c.1.33.18.66.23 1H19zM11 19.93v-2.04c.33.08.66.14 1 .18v2.09c-.34-.05-.67-.13-1-.23zm2 .04v-2.09c.34-.04.67-.1 1-.18v2.04c-.33.1-.66.18-1 .23z"/>
+          </svg>
+        </div>
+        <span class="logo-text">PitchTrack</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: April 26, 2026</p>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>PitchTrack is developed by Bryce Lovell ("I," "me," or "my"). This policy explains what data the app collects, how it's used, and your rights as a user.</p>
+      <p>By using PitchTrack — including through Apple TestFlight — you agree to this policy.</p>
+    </section>
+
+    <section>
+      <h2>Data I Collect</h2>
+      <p><strong>Data you provide:</strong></p>
+      <ul>
+        <li>Account information (email address, display name) when you sign up</li>
+        <li>Pitch session data you log — velocity, pitch type, session notes, date and time</li>
+      </ul>
+      <p><strong>Data collected automatically:</strong></p>
+      <ul>
+        <li>Basic usage analytics (which features are used, app crashes)</li>
+        <li>Device type and OS version for debugging purposes</li>
+      </ul>
+      <div class="callout">
+        <p>I do <strong>not</strong> collect your location, contacts, or any data unrelated to pitching sessions.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How I Use Your Data</h2>
+      <ul>
+        <li>To save and display your pitch history and stats</li>
+        <li>To generate your shareable session cards</li>
+        <li>To improve the app based on usage patterns</li>
+        <li>To send transactional emails such as account confirmation — no marketing emails without your consent</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Storage</h2>
+      <p>Your data is stored securely using <strong>Google Firebase</strong>. Firebase is subject to Google's own privacy standards. Data is stored on servers in the United States.</p>
+    </section>
+
+    <section>
+      <h2>Data Sharing</h2>
+      <p>I do not sell, rent, or share your personal data with third parties, except:</p>
+      <ul>
+        <li><strong>Firebase / Google</strong> — cloud storage and authentication</li>
+        <li><strong>RevenueCat</strong> — managing Pro subscriptions (once payments are live)</li>
+        <li>If required by law</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>TestFlight Beta</h2>
+      <p>During the beta period via Apple TestFlight, crash logs and feedback may be collected by Apple. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> for details on how Apple handles that data.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>You can:</p>
+      <ul>
+        <li>Request a copy of your data at any time</li>
+        <li>Delete your account and all associated data</li>
+        <li>Opt out of analytics (coming in a future update)</li>
+      </ul>
+      <p>To make any of these requests, contact me at <a href="mailto:brycelovell.dev@gmail.com">brycelovell.dev@gmail.com</a>.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>PitchTrack is not directed at children under 13. I do not knowingly collect data from anyone under 13. If you believe a minor has created an account, contact me and I'll delete it promptly.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>I may update this policy as the app grows. If there's a significant change, I'll notify users through the app or via email.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions? Reach out at <a href="mailto:brycelovell.dev@gmail.com">brycelovell.dev@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      <span>© 2026 Bryce Lovell · PitchTrack</span>
+      <span>brycelovell.dev@gmail.com</span>
+    </footer>
+  </div>
+</body>
+</html>
